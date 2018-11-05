@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 public class TestApplication
 {
-    private static final int CRITERIAOPTION = 5;
+    private static final int CRITERIAOPTION = 0;
 
     public static void main( String[] args )
     {
