@@ -9,8 +9,6 @@ public class ANDCriteria extends ComplexSearchCriterion
     @Override
     public boolean isMatching(Person p)
     {
-
-
         boolean result = true;
 
 

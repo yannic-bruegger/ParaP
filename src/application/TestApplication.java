@@ -2,12 +2,11 @@ package application;
 
 import search_criteria.*;
 
-import javax.swing.*;
 import java.util.Iterator;
 
 public class TestApplication
 {
-    private static final int CRITERIAOPTION = 0;
+    private static final int CRITERIAOPTION = 5;
 
     public static void main( String[] args )
     {
@@ -37,6 +36,9 @@ public class TestApplication
 
 
         SearchCriterion criterion = null;
+
+
+
         switch ( CRITERIAOPTION ){
             case 0:
                 criterion = new AgeRangeSearchCriterion( 0, 20 );
@@ -73,5 +75,18 @@ public class TestApplication
         {
             System.out.println( foundPersons.next() );
         }
+
+        System.out.println( "####################################" );
+
+        SearchDecoratorAND decorated = new SearchDecoratorAND( new AgeRangeSearchCriterion(50,99), null );
+        System.out.println( decorated );
+
+        Iterator<Person> foundPersonsTest = poesiealbum.findPersons( decorated );
+        while( foundPersonsTest.hasNext() )
+        {
+            System.out.println( foundPersonsTest.next() );
+        }
+
+
     }
 }
