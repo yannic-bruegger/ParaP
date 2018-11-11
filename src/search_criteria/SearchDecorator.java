@@ -4,8 +4,8 @@ import application.Person;
 
 public abstract class SearchDecorator implements SearchCriterion
 {
-    public SearchCriterion criterion;
-    public SearchDecorator decorator;
+    protected SearchCriterion criterion;
+    protected SearchDecorator decorator;
 
     public SearchDecorator( SearchCriterion criterion, SearchDecorator decorator )
     {
